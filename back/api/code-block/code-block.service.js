@@ -17,7 +17,7 @@ async function query(filterBy) {
 async function getById(codeBlockId) {
     try {
         const collection = await dbService.getCollection('codeblock')
-        const codeBlock = collection.findOne({ _id: ObjectId(codeBlockId) })
+        const codeBlock = collection.findOne({ _id: ObjectId.createFromHexString(codeBlockId) })
         return codeBlock
     } catch (err) {
         logger.error(`while finding code block ${codeBlockId}`, err)
@@ -28,7 +28,7 @@ async function getById(codeBlockId) {
 async function remove(codeBlockId) {
     try {
         const collection = await dbService.getCollection('codeblock')
-        await collection.deleteOne({ _id: ObjectId(codeBlockId) })
+        await collection.deleteOne({ _id: ObjectId.createFromHexString(codeBlockId) })
         return codeBlockId
     } catch (err) {
         logger.error(`cannot remove code block ${codeBlockId}`, err)
@@ -52,7 +52,7 @@ async function update(codeBlock) {
         const codeBlockToSave = { ...codeBlock }
         delete codeBlockToSave._id
         const collection = await dbService.getCollection('codeblock')
-        await collection.updateOne({ _id: ObjectId(codeBlock._id) }, { $set: codeBlockToSave })
+        await collection.updateOne({ _id: ObjectId.createFromHexString(codeBlock._id) }, { $set: codeBlockToSave })
         return codeBlock
     } catch (err) {
         logger.error(`cannot update code block ${codeBlock._id}`, err)

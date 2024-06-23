@@ -1,0 +1,48 @@
+.code-block-page {
+    color: white;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+
+        .back-btn {
+            background-color: $lobby-page-purple;
+            align-self: flex-start;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken($lobby-page-purple, 5%);
+            }
+
+            .back-icon {
+                color: white;
+            }
+        }
+
+        .title,
+        .is-mentor-title,
+        .instruction {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .is-mentor-title {
+            color: $lobby-page-purple;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .instruction {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+}
