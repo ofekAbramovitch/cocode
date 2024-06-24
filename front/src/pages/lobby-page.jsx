@@ -14,12 +14,12 @@ export default function LobbyPage() {
     return (
         <section className="lobby-page main-layout">
             <div className="hero-container full main-layout">
-                <video className="full" autoPlay muted loop playsInline style={{width: '100%'}}>
+                <video className="full" autoPlay muted loop playsInline>
                     <source src={hero} type="video/mp4" />
                 </video>
                 <h1 className="hero-title">Make Your Software <br /> Vision a Reality</h1>
             </div>
-            <div className="code-blocks">
+            <div className="code-blocks full main-layout">
                 <h1 className="title">Choose <span>{`{code block}`}</span></h1>
                 <CodeBlockList codeBlocks={codeBlocks} />
             </div>

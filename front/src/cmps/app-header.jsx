@@ -1,10 +1,7 @@
-
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import { Link } from "react-router-dom"
 
 export default function AppHeader() {
-
-
 
     return (
         <header className="app-header full main-layout">

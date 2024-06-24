@@ -1,6 +1,4 @@
-/* eslint-disable react/prop-types */
-import CodeBlockPreview from "./code-block-preview";
-
+import CodeBlockPreview from "./code-block-preview"
 
 export default function CodeBlockList({ codeBlocks }) {
 

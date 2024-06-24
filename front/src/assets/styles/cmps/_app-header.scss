@@ -1,7 +1,7 @@
 .app-header {
     color: white;
     background-color: $bg-clr-header;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
 
     .logo-container {
         display: flex;
@@ -11,10 +11,6 @@
         
         .logo-icon {
             font-size: 3rem;
-
-            path {
-                
-            }
         }
     }
 }
