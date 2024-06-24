@@ -10,7 +10,6 @@ import correctImg from '../assets/imgs/correct.gif'
 import wrongImg from '../assets/imgs/wrong.gif'
 import { saveCodeBlock } from "../store/code/code.actions"
 
-
 export default function CodeBlockPage() {
     const [codeBlock, setCodeBlock] = useState(null)
     const [isMentor, setIsMentor] = useState(false)
@@ -27,6 +26,7 @@ export default function CodeBlockPage() {
 
     useEffect(() => {
         loadCodeBlock()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [params.id])
 
     useEffect(() => {
@@ -44,6 +44,7 @@ export default function CodeBlockPage() {
             title: codeBlock.title,
             code: codeBlock.code
         })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [codeBlock?.code])
 
     async function loadCodeBlock() {

@@ -35,16 +35,6 @@ function setupSocketAPI(http) {
       if (mentors[title] === socket.id) return;
       socket.broadcast.to(title).emit("update-code", code);
     });
-    socket.on("set-user-socket", (userId) => {
-      logger.info(
-        `Setting socket.userId = ${userId} for socket [id: ${socket.id}]`
-      );
-      socket.userId = userId;
-    });
-    socket.on("unset-user-socket", () => {
-      logger.info(`Removing socket.userId for socket [id: ${socket.id}]`);
-      delete socket.userId;
-    });
   });
 }
 

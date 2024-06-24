@@ -1,8 +1,7 @@
+/* eslint-disable react/prop-types */
 import CodeBlockPreview from "./code-block-preview"
 
 export default function CodeBlockList({ codeBlocks }) {
-
-
 
     return (
         <ul className="code-block-list">
