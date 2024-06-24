@@ -3,6 +3,8 @@ import { useSelector } from "react-redux"
 import CodeBlockList from "../cmps/code-block-list"
 import { loadCodeBlocks } from "../store/code/code.actions"
 import hero from '../assets/imgs/animation.mp4'
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 export default function LobbyPage() {
     const codeBlocks = useSelector(storeState => storeState.codeModule.codeBlocks)
@@ -11,6 +13,7 @@ export default function LobbyPage() {
         loadCodeBlocks()
     }, [])
 
+    if (!codeBlocks || !codeBlocks.length) return (<CircularProgress className="loader" color="secondary" />)
     return (
         <section className="lobby-page main-layout">
             <div className="hero-container full main-layout">

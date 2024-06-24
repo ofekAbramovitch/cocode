@@ -78,9 +78,21 @@ ul {
     padding: 0;
 }
 
-svg {
+svg {}
+
+.main-container,
+.main-app {
+    width: 100%;
 }
 
-.main-container, .main-app{
-    width: 100%;
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    svg {
+        width: 100px;
+        height: 100px;
+    }
 }

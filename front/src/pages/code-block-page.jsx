@@ -9,6 +9,7 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace'
 import correctImg from '../assets/imgs/correct.gif'
 import wrongImg from '../assets/imgs/wrong.gif'
 import { saveCodeBlock } from "../store/code/code.actions"
+import { CircularProgress } from "@mui/material"
 
 export default function CodeBlockPage() {
     const [codeBlock, setCodeBlock] = useState(null)
@@ -26,7 +27,7 @@ export default function CodeBlockPage() {
 
     useEffect(() => {
         loadCodeBlock()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [params.id])
 
     useEffect(() => {
@@ -44,7 +45,7 @@ export default function CodeBlockPage() {
             title: codeBlock.title,
             code: codeBlock.code
         })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [codeBlock?.code])
 
     async function loadCodeBlock() {
@@ -109,6 +110,7 @@ export default function CodeBlockPage() {
         setCodeBlock(prevState => ({ ...prevState, code: value }))
     }
 
+    if (!codeBlock || !codeBlock._id) return (<CircularProgress className="loader" color="secondary" />)
     return (
         <section className="code-block-page main-layout">
             <div className="container">
