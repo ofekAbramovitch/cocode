@@ -30,11 +30,11 @@ To see a live demo of the platform, please visit [https://cocode-ccz6.onrender.c
 
 ### Lobby Page
 
-[![Lobby Page Image](https://res.cloudinary.com/ofekabramovitch/image/upload/v1719330228/dk6xhikrigyhemoiboi4.png)]
+![Lobby Page Image](https://res.cloudinary.com/ofekabramovitch/image/upload/v1719330228/dk6xhikrigyhemoiboi4.png)
 
 ### Code Block Page
 
-[![Code Block Page Image](https://res.cloudinary.com/ofekabramovitch/image/upload/v1719330140/jdzpzkijjmfrnhxq1hqd.png)]
+![Code Block Page Image](https://res.cloudinary.com/ofekabramovitch/image/upload/v1719330140/jdzpzkijjmfrnhxq1hqd.png)
 
 ## Getting Started
 
@@ -48,7 +48,7 @@ To get started with CoCode, follow these simple steps:
 6. Install dependencies: `npm install`
 7. Start the frontend development server: `npm run dev`
 
-Visit http://localhost:5173 in your browser to see the project running.
+Visit `http://localhost:5173` in your browser to see the project running.
 
 ## Contact
 
